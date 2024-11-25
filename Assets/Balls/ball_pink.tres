@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Ball" load_steps=3 format=3 uid="uid://c8d1a8w8xl7pr"]
+
+[ext_resource type="Script" path="res://Resources/ball.gd" id="1_0bjbi"]
+[ext_resource type="Texture2D" uid="uid://fwva5d36xj6y" path="res://Assets/Balls/PNG/Ball_Yellow.png" id="2_fogl2"]
+
+[resource]
+script = ExtResource("1_0bjbi")
+name = &"Yellow Ball"
+texture = ExtResource("2_fogl2")
+scale = 0.015

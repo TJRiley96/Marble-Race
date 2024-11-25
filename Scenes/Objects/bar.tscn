@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d05jamuicfbw3"]
+
+[ext_resource type="Texture2D" uid="uid://b16nprs4ese3x" path="res://Assets/PNG/Test_Hazard.png" id="1_u7mdp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ey33"]
+size = Vector2(60, 26)
+
+[node name="Bar" type="AnimatableBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2ey33")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u7mdp")

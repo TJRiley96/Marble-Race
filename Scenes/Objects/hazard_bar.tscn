@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://csge0dchl4dnc"]
+
+[ext_resource type="Texture2D" uid="uid://b16nprs4ese3x" path="res://Assets/PNG/Test_Hazard.png" id="1_pao7g"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pd5o5"]
+friction = 0.78
+bounce = 0.4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ar668"]
+size = Vector2(64, 32)
+
+[node name="Hazard Bar" type="AnimatableBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_pd5o5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pao7g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ar668")
+one_way_collision_margin = 0.0

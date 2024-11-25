@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgabqrh00jawn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqj62"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bs2r8"]
+
+[node name="Root" type="Node2D"]
+
+[node name="TemplateLevel" type="Node2D" parent="."]
+
+[node name="Background" type="TileMapLayer" parent="TemplateLevel"]
+
+[node name="Walls" type="TileMapLayer" parent="TemplateLevel"]
+
+[node name="CameraController" type="Node2D" parent="TemplateLevel"]
+
+[node name="Camera2D" type="Camera2D" parent="TemplateLevel/CameraController"]
+
+[node name="BallStart" type="Node2D" parent="TemplateLevel"]
+
+[node name="ResetBall" type="Area2D" parent="TemplateLevel"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TemplateLevel/ResetBall"]
+shape = SubResource("RectangleShape2D_nqj62")
+
+[node name="Exit" type="Area2D" parent="TemplateLevel"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TemplateLevel/Exit"]
+shape = SubResource("RectangleShape2D_bs2r8")
+
+[node name="LevelComponents" type="Node2D" parent="TemplateLevel"]

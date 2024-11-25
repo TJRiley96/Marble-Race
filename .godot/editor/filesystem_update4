@@ -1,0 +1,17 @@
+res://Scenes/game.tscn
+res://Scenes/Objects/ball_physic.tres
+res://Assets/Balls/ball_purple.tres
+res://Assets/Balls/ball_yellow.tres
+res://Scenes/Levels/Resource/test.tres
+res://Scenes/tile_set_bricks.tres
+res://Scenes/Objects/spinner.tscn
+res://Scenes/Levels/template_level.tscn
+res://Scenes/Objects/spawn_spinner.tscn
+res://Scenes/Objects/bounce_pad.tscn
+res://Scenes/Objects/hazard_bar.tscn
+res://Scenes/UI/main_menu.tscn
+res://Scenes/Objects/ball.tscn
+res://Scenes/Levels/test_drop.tscn
+res://Scenes/Levels/test_level_2.tscn
+res://Scenes/UI/score_menu.tscn
+res://Scenes/UI/display_ball.tscn

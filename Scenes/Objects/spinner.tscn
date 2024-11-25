@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://bruh4pq0lcvj2"]
+
+[ext_resource type="Texture2D" uid="uid://bknw14umii7ki" path="res://Assets/PNG/Spinner.png" id="1_7xqfc"]
+
+[sub_resource type="Animation" id="Animation_vwt5y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_oscck"]
+resource_name = "Spinner Spin Clockwise"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.14159, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4n6p7"]
+_data = {
+"RESET": SubResource("Animation_vwt5y"),
+"Spinner Spin Clockwise": SubResource("Animation_oscck")
+}
+
+[node name="Spinner" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7xqfc")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(16, -128, -16, -128, -16, -16, -128, -16, -128, 16, -16, 16, -16, 128, 16, 128, 16, 16, 128, 16, 128, -16, 16, -16)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4n6p7")
+}
+autoplay = "Spinner Spin Clockwise"

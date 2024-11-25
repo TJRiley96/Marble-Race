@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Game" load_steps=8 format=3 uid="uid://eef30dmtaurt"]
+
+[ext_resource type="Script" path="res://Resources/ball.gd" id="1_bbw47"]
+[ext_resource type="Script" path="res://Resources/game.gd" id="1_u5ly7"]
+[ext_resource type="Resource" uid="uid://bitva6o010nh3" path="res://Assets/Balls/ball_gabby.tres" id="2_oe38n"]
+[ext_resource type="Resource" uid="uid://c8d1a8w8xl7pr" path="res://Assets/Balls/ball_pink.tres" id="3_tkra7"]
+[ext_resource type="Resource" uid="uid://co00khqpy066n" path="res://Assets/Balls/ball_purple.tres" id="4_y2eyg"]
+[ext_resource type="Resource" uid="uid://djuawvj66523e" path="res://Assets/Balls/ball_tj.tres" id="5_7cgxp"]
+[ext_resource type="Resource" uid="uid://bgb574yc2q4lu" path="res://Assets/Balls/ball_yellow.tres" id="6_kiwgh"]
+
+[resource]
+script = ExtResource("1_u5ly7")
+max_balls = 8
+min_balls = 2
+balls = Array[ExtResource("1_bbw47")]([ExtResource("2_oe38n"), ExtResource("3_tkra7"), ExtResource("4_y2eyg"), ExtResource("5_7cgxp"), ExtResource("6_kiwgh")])

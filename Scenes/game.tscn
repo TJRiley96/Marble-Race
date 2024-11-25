@@ -1,0 +1,41 @@
+[gd_scene load_steps=10 format=3 uid="uid://dmowc4vafd0u0"]
+
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_2ijat"]
+[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="3_tqi5i"]
+[ext_resource type="Script" path="res://Resources/ball.gd" id="4_n1202"]
+[ext_resource type="Resource" uid="uid://co00khqpy066n" path="res://Assets/Balls/ball_purple.tres" id="5_o1kb8"]
+[ext_resource type="Resource" uid="uid://bgb574yc2q4lu" path="res://Assets/Balls/ball_yellow.tres" id="6_ldalk"]
+[ext_resource type="Resource" uid="uid://c8d1a8w8xl7pr" path="res://Assets/Balls/ball_pink.tres" id="7_60j32"]
+[ext_resource type="Resource" uid="uid://djuawvj66523e" path="res://Assets/Balls/ball_tj.tres" id="8_gk2dh"]
+[ext_resource type="PackedScene" uid="uid://cd0pryb0x2qft" path="res://Scenes/UI/main_menu.tscn" id="9_e3c4l"]
+[ext_resource type="Resource" uid="uid://bitva6o010nh3" path="res://Assets/Balls/ball_gabby.tres" id="9_kkkiu"]
+
+[node name="Game" type="Node2D"]
+position = Vector2(903, 461)
+script = ExtResource("1_2ijat")
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("3_tqi5i")
+BALL_DATA = Array[ExtResource("4_n1202")]([ExtResource("5_o1kb8"), ExtResource("6_ldalk"), ExtResource("7_60j32"), ExtResource("8_gk2dh"), ExtResource("9_kkkiu")])
+
+[node name="Level" type="Node2D" parent="."]
+position = Vector2(229, 154)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MainMenu" parent="UI" instance=ExtResource("9_e3c4l")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 115.0
+offset_bottom = 144.0

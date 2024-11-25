@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://4efw4eofabc"]
+
+[ext_resource type="Texture2D" uid="uid://c286rywxqa2yd" path="res://Assets/PNG/Ramp.png" id="1_vhwbp"]
+
+[node name="RampLToR" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(508, -256, 508, 252, -514, 252)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vhwbp")
+flip_h = true

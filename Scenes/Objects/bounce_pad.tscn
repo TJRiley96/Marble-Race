@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3 uid="uid://dd3kgjrkidxuu"]
+
+[ext_resource type="Texture2D" uid="uid://bvdqbodekhb4v" path="res://Assets/PNG/BouncePad_Bottom.png" id="1_qglwb"]
+[ext_resource type="Texture2D" uid="uid://dbrjlvwmfbo0y" path="res://Assets/PNG/BouncePad_Top.png" id="2_0h2le"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yxee"]
+size = Vector2(1022, 108)
+
+[sub_resource type="Animation" id="Animation_u2gb8"]
+resource_name = "Bounce"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PadModule:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.8, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 42), Vector2(0, 42), Vector2(0, -343)]
+}
+
+[sub_resource type="Animation" id="Animation_owrpn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PadModule:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 42)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ak6yy"]
+_data = {
+"Bounce": SubResource("Animation_u2gb8"),
+"RESET": SubResource("Animation_owrpn")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdnm5"]
+size = Vector2(1022, 87)
+
+[node name="BouncePad" type="AnimatableBody2D"]
+
+[node name="Servos" type="Sprite2D" parent="."]
+texture = ExtResource("1_qglwb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(0, 212)
+shape = SubResource("RectangleShape2D_5yxee")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ak6yy")
+}
+autoplay = "Bounce"
+
+[node name="PadModule" type="AnimatableBody2D" parent="."]
+position = Vector2(0, 42)
+
+[node name="Pad" type="Sprite2D" parent="PadModule"]
+z_index = 1
+position = Vector2(0, -93)
+texture = ExtResource("2_0h2le")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PadModule"]
+position = Vector2(0, 114.667)
+shape = SubResource("RectangleShape2D_fdnm5")

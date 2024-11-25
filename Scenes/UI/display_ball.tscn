@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://catw0h6tpkljx"]
+
+[ext_resource type="Script" path="res://Scripts/display_ball.gd" id="1_bukoo"]
+[ext_resource type="Texture2D" uid="uid://dfit8g0aui6qw" path="res://Assets/PNG/Ball.png" id="1_sy58l"]
+
+[node name="DisplayBall" type="HBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = 9.0
+offset_right = 77.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bukoo")
+
+[node name="Order" type="Label" parent="."]
+layout_mode = 2
+text = "1:"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_sy58l")
+expand_mode = 3
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 2
+text = "PlaceHolder
+"

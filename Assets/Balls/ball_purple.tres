@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Ball" load_steps=3 format=3 uid="uid://co00khqpy066n"]
+
+[ext_resource type="Texture2D" uid="uid://4hljio8qrnws" path="res://Assets/Balls/PNG/Ball_Purple.png" id="1_7bax8"]
+[ext_resource type="Script" path="res://Resources/ball.gd" id="2_prmcc"]
+
+[resource]
+script = ExtResource("2_prmcc")
+name = &"Purple Ball"
+texture = ExtResource("1_7bax8")
+scale = 0.01501

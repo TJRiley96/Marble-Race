@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjyjqgxnxg6ob"]
+
+[ext_resource type="Texture2D" uid="uid://beee3qaj6kcna" path="res://Assets/PNG/Spawn Ring.png" id="1_5w65t"]
+
+[sub_resource type="Animation" id="Animation_1m66r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_810he"]
+resource_name = "Spin_Spawn_Clockwise"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wevao"]
+_data = {
+"RESET": SubResource("Animation_1m66r"),
+"Spin_Spawn_Clockwise": SubResource("Animation_810he")
+}
+
+[node name="SpawnSpinner" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5w65t")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(0, -1)
+polygon = PackedVector2Array(54, -509, -13, -512, -63, -507, -103, -500, -150, -489, -197, -471, -222, -460, -306, -411, -337, -388, -349, -374, -379, -341, -412, -303, -440, -263, -466, -211, -491, -142, -502, -97, -512, -39, -511, 43, -501, 108, -489, 153, -474, 195, -455, 235, -428, 282, -392, 333, -366, 359, -327, 395, -282, 427, -246, 450, -194, 476, -148, 491, -94, 504, -94, 471, -134, 461, -176, 446, -220, 426, -253, 407, -294, 379, -334, 343, -360, 317, -395, 269, -422, 226, -439, 187, -456, 146, -466, 107, -475, 50, -477, -24, -471, -84, -456, -140, -440, -188, -417, -235, -391, -277, -356, -319, -329, -350, -297, -374, -229, -420, -184, -441, -126, -462, -68, -473, -14, -477, 37, -475, 98, -467, 146, -454, 193, -436, 236, -414, 291, -377, 334, -339, 363, -308, 400, -257, 424, -215, 442, -176, 458, -124, 469, -68, 476, 2, 468, 83, 453, 150, 422, 224, 392, 279, 361, 314, 314, 362, 263, 400, 216, 429, 176, 447, 127, 463, 95, 471, 95, 504, 143, 493, 197, 473, 239, 454, 290, 423, 346, 379, 382, 342, 413, 304, 453, 240, 484, 171, 488, 158, 504, 96, 511, 7, 506, -67, 496, -123, 477, -184, 459, -225, 431, -273, 395, -324, 368, -353, 325, -394, 276, -428, 248, -446, 213, -464, 161, -485, 117, -498)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wevao")
+}
+autoplay = "Spin_Spawn_Clockwise"
