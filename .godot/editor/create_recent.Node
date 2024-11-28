@@ -1,3 +1,8 @@
+AnimationPlayer
+CollisionPolygon2D
+CollisionShape2D
+TileMapLayer
+AnimatableBody2D
 Control
 HBoxContainer
 Label
@@ -5,11 +10,6 @@ TextureRect
 HSplitContainer
 VBoxContainer
 MarginContainer
-CollisionShape2D
 Node2D
 Node
 Button
-RigidBall
-CollisionPolygon2D
-Sprite2D
-StaticBody2D

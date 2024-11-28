@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://cwdc4wjorxu6w"]
+[gd_scene load_steps=15 format=4 uid="uid://cwdc4wjorxu6w"]
 
 [ext_resource type="TileSet" uid="uid://drd6sougpoj5t" path="res://Scenes/tile_set_bricks.tres" id="1_logbs"]
 [ext_resource type="Script" path="res://Scripts/level.gd" id="1_ojopf"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bruh4pq0lcvj2" path="res://Scenes/Objects/spinner.tscn" id="5_kdnlu"]
 [ext_resource type="PackedScene" uid="uid://dd3kgjrkidxuu" path="res://Scenes/Objects/bounce_pad.tscn" id="6_e0ybq"]
 [ext_resource type="PackedScene" uid="uid://csge0dchl4dnc" path="res://Scenes/Objects/hazard_bar.tscn" id="7_pjr14"]
+[ext_resource type="PackedScene" uid="uid://5qrmgacv27n0" path="res://test_spinner.tscn" id="9_w86lk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bs2r8"]
 size = Vector2(27.5, 348.5)
@@ -153,10 +154,10 @@ libraries = {
 }
 autoplay = "SideToSide"
 
-[node name="Spinner2" parent="LevelComponents" instance=ExtResource("5_kdnlu")]
-position = Vector2(165, 41)
-
 [node name="BallComp" type="Node2D" parent="."]
+
+[node name="TestSpinner" parent="." instance=ExtResource("9_w86lk")]
+position = Vector2(188, 34)
 
 [connection signal="body_exited" from="ResetBall" to="ResetBall" method="_on_body_exited"]
 [connection signal="body_entered" from="Exit" to="Exit" method="_on_body_entered"]
