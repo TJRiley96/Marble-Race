@@ -107,6 +107,7 @@ script = ExtResource("2_d2clh")
 SPAWN = NodePath("../Spawn")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="ResetBall"]
+visible = false
 position = Vector2(-467, 395)
 polygon = PackedVector2Array(923, -36, 1015, -131, 1019, -328, 1042, -354, 1083, -355, 1085, -725, -150, -725, -149, -35, 125, -36, 121, -94, 172, -35)
 

@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://bdwoj34kdvey4"]
+
+[ext_resource type="StyleBox" uid="uid://br68qxg7jse04" path="res://Resources/UI/button_hover.tres" id="1_bpn5m"]
+[ext_resource type="StyleBox" uid="uid://cb21ssvwdk0ch" path="res://Resources/UI/button_pressed.tres" id="1_po8h4"]
+[ext_resource type="StyleBox" uid="uid://c117gy422h381" path="res://Resources/UI/button.tres" id="2_kplhf"]
+
+[resource]
+/colors/Butt = Color(0, 0, 0, 1)
+/styles/Button = ExtResource("1_po8h4")
+Button/styles/disabled = ExtResource("2_kplhf")
+Button/styles/hover = ExtResource("1_bpn5m")
+Button/styles/normal = ExtResource("2_kplhf")
+Button/styles/pressed = ExtResource("1_po8h4")
