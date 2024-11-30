@@ -14,3 +14,7 @@ res://Scenes/Objects/hazard_bar.tscn
 res://Scenes/UI/main_menu.tscn
 res://Scenes/Objects/ball.tscn
 res://Scenes/Levels/test_drop.tscn
+res://Resources/UI/menu_theme.tres
+res://Resources/UI/button.tres
+res://Resources/UI/button_hover.tres
+res://Resources/UI/button_pressed.tres
